@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+#include "../include/adicionarInstrucao.hpp"
+
+void adicionarInstrucao(vector<Assembly*> &instrucoes, int iden){
+	string inst, op1, op2, op3;
+
+	instrucoes.push_back(new Assembly());
+
+	cout << "\nDigite a instrução: ";
+	cin >> inst;
+	
+	if(inst != "lw" && inst != "sw" && inst != "j"){
+		cout << "Digite o Operando 1: ";
+		cin >> 	op1;
+		cout << "Digite o Operando 2: ";
+		cin >> 	op2;
+		cout << "Digite o Operando 3: ";
+		cin >> 	op3;
+
+		Assembly r(iden, inst, op1, op2, op3);
+
+		instrucoes[iden-1]->copy(r);
+		return;
+	}
+	else if(inst == "lw" || inst == "sw"){
+		cout << "Digite o Operando 1: ";
+		cin >> op1;
+		cout << "Digite o Operando 2: ";
+		cin >> op2;
+
+		Assembly r(iden, inst, op1, op2, "\0");
+		instrucoes[iden-1]->copy(r);
+		return;
+	}
+	cout << "Digite o Operando 1: ";
+	cin >> op1;
+	Assembly r(iden, inst, op1, "\0", "\0");
+	instrucoes[iden-1]->copy(r);
+}
