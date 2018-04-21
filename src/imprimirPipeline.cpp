@@ -23,7 +23,7 @@ void imprimirPipeline(vector<Assembly*> &instrucoes){
 				instrucoes[i]->setInicio(instrucoes[i]->getInicio()+1);
 				instrucoes[i]->setCiclo(instrucoes[i]->getCiclo()+1);
 				val = true;
-				cp++
+				//cp++
 				break;
 			}
 		}
