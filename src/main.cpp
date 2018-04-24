@@ -29,11 +29,12 @@ int main(){
 		}
 	}
 
-	//verJump(instrucoes);
+	
 
 	verDepend(instrucoes);
 	// Calcular onde cada instrução inicia
 	calcularPipeline(instrucoes);
+	//verJump(instrucoes);
 	// Imprimir
 	imprimirPipeline(instrucoes);
 	instrucoes.clear();

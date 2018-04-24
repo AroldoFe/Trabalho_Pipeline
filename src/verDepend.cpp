@@ -32,7 +32,7 @@ void verDepend(std::vector<Assembly*> &instrucoes){
 				}
 			}
 			// Fazendo dependencia do BEQ e BNQ
-			if(instrucoes[i]->getInst() == "beq" || instrucoes[i]->getInst() == "bnq"){
+			if(instrucoes[i]->getInst() == "beq" || instrucoes[i]->getInst() == "bne"){
 				// ADD SUB LW
 				if(instrucoes[j]->getInst() == "add" || instrucoes[j]->getInst() == "sub" || instrucoes[j]->getInst() == "lw"){
 					if(instrucoes[i]->getOp1() == instrucoes[j]->getOp1()){
