@@ -81,6 +81,10 @@ void verDepend(std::vector<Assembly*> &instrucoes){
 						instrucoes[i]->setDep2(instrucoes[j]->getOp1());
 						instrucoes[i]->setInst2(instrucoes[j]->getId());
 					}
+					if(instrucoes[i]->getOp2() == instrucoes[j]->getOp1()){
+						instrucoes[i]->setDep3(instrucoes[j]->getOp1());
+						instrucoes[i]->setInst3(instrucoes[j]->getId());
+					}
 				}
 				// SW
 				if(instrucoes[j]->getInst() == "sw"){
