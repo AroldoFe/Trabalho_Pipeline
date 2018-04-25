@@ -14,8 +14,8 @@ int main(){
 
 	int resp = 1, cont = 1;
 
+	cout << "Escolha a opção:\n1) Adicionar instrução\n2) Ver Pipeline" << endl;
 	while(resp != 2){
-		cout << "Escolha a opção:\n1) Adicionar instrução\n2) Ver Pipeline" << endl;
 		cin >> resp;
 		switch(resp){
 			case 1:
@@ -36,6 +36,12 @@ int main(){
 	calcularPipeline(instrucoes);
 	//verJump(instrucoes);
 	// Imprimir
+
+	/*for(int i=0; i< (int)instrucoes.size(); i++){
+		cout << instrucoes[i]->getInst() << " " << instrucoes[i]->getOp1() << " " << instrucoes[i]->getOp2() << " " ;
+		cout << instrucoes[i]->getOp3() << " " << instrucoes[i]->getInicio()<< " " << instrucoes[i]->getFim() << endl;
+	}*/
+
 	imprimirPipeline(instrucoes);
 	instrucoes.clear();
 	instrucoes.~vector();

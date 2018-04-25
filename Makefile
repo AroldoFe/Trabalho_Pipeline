@@ -1,7 +1,7 @@
 PROG = ppl
 CC = g++
-CPPFLAGS = -O0 -g -Wall -pedantic -lboost_system -I /usr/include/boost/algorithm
-OBJS = main.o adicionarInstrucao.o verDepend.o imprimirPipeline.o calcularPipeline.o assembly.o
+CPPFLAGS = -O0 -g -Wall -pedantic
+OBJS = main.o adicionarInstrucao.o verDepend.o imprimirPipeline.o calcularPipeline.o assembly.o manipularString.o
 
 $(PROG) : $(OBJS)
 	$(CC) $(OBJS) -o bin/$(PROG)
@@ -23,6 +23,9 @@ calcularPipeline.o : include/calcularPipeline.hpp
 
 assembly.o : include/assembly.hpp
 	$(CC) $(CPPFLAGS) -c src/assembly.cpp 
+
+manipularString.o: include/manipularString.hpp
+	$(CC) $(CPPFLAGS) -c src/manipularString.cpp
 
 move:
 	mv *.o build/
