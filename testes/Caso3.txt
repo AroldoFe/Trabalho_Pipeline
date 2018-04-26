@@ -1,0 +1,19 @@
+1
+add $t0 $t1 $v0
+1
+add $t2 $t3 $t4
+1
+add $t5 $t6 $t7
+1
+sub $t8 $t9 $t10
+1
+j 7
+1
+lw $t4 $s0
+1
+add $t10 $t7 $t8
+1
+sw $t4 $t9
+1
+lw $t4 $t11
+2

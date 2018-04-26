@@ -1,0 +1,11 @@
+1
+beq $s0 $s1 4
+1
+add $t1 $t2 $t3
+1
+lw $t0 $t1
+1
+sub $t1 $t2 $t3
+1
+add $s5 $t1 $t4
+2
